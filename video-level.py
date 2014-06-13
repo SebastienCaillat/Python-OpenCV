@@ -24,11 +24,20 @@ while True :
     mask = cv2.inRange(frame,lower_level,upper_level)
     # Convert frame from color to grayscale
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    # height, width = frame.shape[:2] # Find image size
+    # height, width = frame.shape[:2] # Find image size if needed
     # Display the resulting frame
     cv2.imshow('Color',frame)
     cv2.imshow('B&W',gray)
     cv2.imshow('Mask',mask)
+    
+    # If smaller size needed, uncoment this and comment 3 previous lines
+    #small = cv2.resize(frame, (0,0), fx=0.5, fy=0.5)
+    #smallmask = cv2.resize(mask, (0,0), fx=0.5, fy=0.5) 
+    #smallgray = cv2.resize(gray, (0,0), fx=0.5, fy=0.5)
+    #cv2.imshow('Small',small)
+    #cv2.imshow('Small gray',smallgray)
+    #cv2.imshow('Small mask',smallmask)
+    
     if cv2.waitKey(1) & 0xFF == ord('q'): break
 # When everything done, release the capture
 cap.release()
