@@ -8,7 +8,7 @@ See some details here: https://sebastiencaillat.wordpress.com/2014/06/12/very-fi
 ## Requirements
 
 You will need:
-- Python 2.7.x
+- Python 2.7.x (https://www.python.org/download/)
 - OpenCV (http://opencv.org/)
 - NumPy (for Windows users: http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy)
 - any (web)cam
